@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('linkedin_url')->nullable();
             $table->string('cv_url')->nullable();
             $table->string('image_url')->nullable();
+            $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
