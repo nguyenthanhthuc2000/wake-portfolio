@@ -18,7 +18,32 @@ import AppLogoIcon from './app-logo-icon';
 const mainNavItems: NavItem[] = [
     {
         title: 'Dashboard',
-        href: '/dashboard',
+        href: '/admin/',
+        icon: LayoutGrid,
+    },
+        {
+        title: 'Blogs',
+        href: '/admin/blogs',
+        icon: LayoutGrid,
+    },
+    {
+        title: 'Categoryies',
+        href: '/admin/categoryies',
+        icon: LayoutGrid,
+    },
+    {
+        title: 'Projects',
+        href: '/admin/projects',
+        icon: LayoutGrid,
+    },
+    {
+        title: 'Expericences',
+        href: '/admin/expericences',
+        icon: LayoutGrid,
+    },
+    {
+        title: 'Tech Stacks',
+        href: '/admin/skills',
         icon: LayoutGrid,
     },
 ];
