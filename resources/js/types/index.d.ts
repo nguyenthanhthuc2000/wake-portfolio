@@ -35,8 +35,14 @@ export interface User {
     id: number;
     name: string;
     email: string;
+    introduce?: string;
+    github_url?: string;
+    linkedin_url?: string;
+    facebook_url?: string;
+    image_url?: string;
+    cv_url?: string;
     avatar?: string;
-    email_verified_at: string | null;
+    email_verified_at: string;
     created_at: string;
     updated_at: string;
     [key: string]: unknown; // This allows for additional properties...

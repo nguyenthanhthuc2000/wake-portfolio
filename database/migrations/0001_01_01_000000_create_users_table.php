@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('password');
             $table->text('introduce')->nullable();
             $table->string('google_id')->nullable();
-            $table->string('git_url')->nullable();
+            $table->string('github_url')->nullable();
             $table->string('facebook_url')->nullable();
             $table->string('linkedin_url')->nullable();
             $table->string('cv_url')->nullable();

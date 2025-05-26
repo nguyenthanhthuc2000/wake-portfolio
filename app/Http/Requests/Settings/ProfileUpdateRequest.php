@@ -18,7 +18,12 @@ class ProfileUpdateRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'max:255'],
-
+            'introduce' => ['nullable', 'string'],
+            'image_url' => ['nullable', 'image', 'max:255'],
+            'facebook_url' => ['nullable', 'url', 'max:255'],
+            'github_url' => ['nullable', 'url', 'max:255'],
+            'cv_url' => ['nullable', 'url', 'max:255'],
+            'linkedin_url' => ['nullable', 'url', 'max:255'],
             'email' => [
                 'required',
                 'string',
