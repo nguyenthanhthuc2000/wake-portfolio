@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreSkillRequest;
 use App\Http\Requests\UpdateSkillRequest;
 use App\Models\Skill;
+use Inertia\Inertia;
 
 class SkillController extends Controller
 {
@@ -13,7 +14,11 @@ class SkillController extends Controller
      */
     public function index()
     {
-        //
+        $skills = Skill::all();
+
+        return Inertia::render('admin/skills/index', [
+            'skills' => $skills,
+        ]);
     }
 
     /**
@@ -21,7 +26,7 @@ class SkillController extends Controller
      */
     public function create()
     {
-        //
+        return Inertia::render('admin/skills/create');
     }
 
     /**
@@ -29,7 +34,11 @@ class SkillController extends Controller
      */
     public function store(StoreSkillRequest $request)
     {
-        //
+        $skill = Skill::create($request->validated());
+        $skill->save();
+        $request->session()->flash('success', 'Skill created successfully.');
+
+        return to_route('skills.index');
     }
 
     /**
